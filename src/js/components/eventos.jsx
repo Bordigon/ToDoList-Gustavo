@@ -1,16 +1,16 @@
 import Tareas from "./Tareas.jsx"
 import React from 'react'
+import ReactDOM from 'react-dom/client'
 
 window.onload = ()=>{
+    var count = 0;
     const input = document.getElementById("input");
-    const contenido = document.getElementById("contenido")
-    const p = document.createElement("p")
+    const root = ReactDOM.createRoot(document.getElementById("contenido"))
     function hola (e){{
         if(e.key==="Enter"){
         console.log("hasta ac'a todo bn");
-        p.innerHTML = e.target.value
-        //contenido.appendChild(Tareas(e.target.value))
-        contenido.appendChild(p)
+        const p = e.target.value
+        root.render(<Tareas input={p}  add="true"/>)
         }
     }
         

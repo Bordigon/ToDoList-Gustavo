@@ -13,16 +13,17 @@ const Home = () => {
 			<h1 className="text-center mt-5">holaaaa</h1>
 				<img src={rigoImage} />
 			<input id="input" placeholder="input" type="text-only"></input><br/>
-			<div id="contenido">
+			<div>
+				<div id="contenido"></div>
 			</div>
 			<div className="mt-3">
-				<div id="1" className="btn btn-success">
+				<div id="" className="btn btn-success">
 					hello
 				</div>
-				<div id="2" className="btn btn-primary mx-3">
+				<div id="" className="btn btn-primary mx-3">
 					niggers
 				</div>
-				<div id="3" className="btn btn-danger">
+				<div id="" className="btn btn-danger">
 					niggers pero en rojo
 				</div>
 			</div>
