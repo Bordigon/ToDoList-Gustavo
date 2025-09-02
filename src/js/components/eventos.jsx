@@ -9,7 +9,7 @@ window.onload = ()=>{
         if(e.key==="Enter"){
         console.log("hasta ac'a todo bn");
         const p = e.target.value
-        root.render(<Tareas input={p}  add="true"/>)
+        root.render(<Tareas input={p}/>)
         e.target.value = ""
         }
     }
