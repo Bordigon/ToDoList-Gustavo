@@ -12,11 +12,9 @@ window.onload = ()=>{
             eliminar.parentNode.removeChild(eliminar)
         }
 
-    function hola (e){{
+    function tarea (e){{
         if(e.key==="Enter"){
-        console.log("hasta ac'a todo bn");
         const p = e.target.value
-        root.render(<p>hola</p>)
         root.render(<Tareas input={p} elimination={borrado}/>)
         e.target.value = ""
         }
@@ -26,5 +24,5 @@ window.onload = ()=>{
     btnClear.addEventListener("click",()=>{
         root.render(<Tareas clear="true"/>)
     })
-    input.addEventListener("keydown",hola)
+    input.addEventListener("keydown",tarea)
 }

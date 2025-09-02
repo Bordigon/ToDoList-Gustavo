@@ -1,7 +1,7 @@
-#reloj {
-    width: 100px
+.list-group-item .btn-close {
+    visibility:hidden;
 }
 
-.reloj{
-    font-size:100px
+.list-group-item:hover .btn-close {
+    visibility:visible;
 }

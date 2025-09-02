@@ -15,7 +15,9 @@ const Home = () => {
 				<div className="card-body col-sm-11">
 					<div id="card" className="card">
 					<input id="input" placeholder="cosas por hacer" type="text-only" className="card-header"></input>
-					<div id="tareas" className="list-group list-group-flush"></div>
+					<div id="tareas" className="list-group list-group-flush">
+						<div className="d-flex align-items-left mx-2">u are free</div>
+					</div>
 					</div>
 				</div>
 			</div>

@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 
 export default function Tareas (props){
-    const [key, setKey] = useState(0)
     const [tarea, setTarea] = useState([]);
     const clear = props.clear
     useEffect(()=>{
+        if(clear==="true")
+            setTarea([])
+        else if(props.input!=="")
         setTarea(tarea.concat(props.input))
-        setKey(key+1)   
     },[props.input])
 
     const tareasEnHtml = tarea.map((task)=>{
@@ -20,18 +21,16 @@ export default function Tareas (props){
                 )
         
     })
-
-    console.log(tarea)
     
-    if(clear==="true"){
-        setTarea([])
-        return (<></>)
+    if(clear=="true"){
+        return (<><div className="d-flex align-items-left mx-2">u are free</div></>)
     }
 
     else{
     return (
         <>
             {tareasEnHtml}
+            <div className="d-flex align-items-left mx-2">{tarea.length} tasks left</div>
         </>
     )}
 }
