@@ -13,7 +13,7 @@ const Home = () => {
 			<h1 className="text-center mt-5">ToDoList</h1>
 			<div className="card col-sm-4 d-flex align-items-center">
 				<div className="card-body col-sm-11">
-					<div className="card">
+					<div id="card" className="card">
 					<input id="input" placeholder="cosas por hacer" type="text-only" className="card-header"></input>
 					<div id="tareas" className="list-group list-group-flush"></div>
 					</div>
