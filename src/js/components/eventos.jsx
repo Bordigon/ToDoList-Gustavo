@@ -5,25 +5,26 @@ import ReactDOM from 'react-dom/client'
 window.onload = ()=>{
     const input = document.getElementById("input");
     const root = ReactDOM.createRoot(document.getElementById("tareas"))
-  /*  function elimination2 (id){
-        const eliminar = document.getElementById(data)
-        eliminar.parentNode.removeChild(eliminar) 
-    }*/
+    const btnClear = document.getElementById("btnClear")
+
+    const borrado = (data)=>{
+            const eliminar = document.getElementById(data)
+            eliminar.parentNode.removeChild(eliminar)
+        }
+
     function hola (e){{
         if(e.key==="Enter"){
         console.log("hasta ac'a todo bn");
         const p = e.target.value
         root.render(<p>hola</p>)
-        root.render(<Tareas input={p} elimination={(data)=>{
-            const eliminar = document.getElementById(data)
-            eliminar.parentNode.removeChild(eliminar)
-        }}/>)
+        root.render(<Tareas input={p} elimination={borrado}/>)
         e.target.value = ""
-   //     const button = document.getElementsByClassName("btn-close")
-     //   button.addEventListener('click')
         }
     }
         
     }
+    btnClear.addEventListener("click",()=>{
+        root.render(<Tareas clear="true"/>)
+    })
     input.addEventListener("keydown",hola)
 }

@@ -20,11 +20,8 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="mt-3">
-				<div id="" className="btn btn-success">
-				</div>
-				<div id="" className="btn btn-primary mx-3">
-				</div>
-				<div id="" className="btn btn-danger">
+				<div id="btnClear" className="btn btn-primary mx-3">
+					Clear
 				</div>
 			</div>
 		</div>

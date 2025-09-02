@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 export default function Tareas (props){
     const [key, setKey] = useState(0)
     const [tarea, setTarea] = useState([]);
+    const clear = props.clear
     useEffect(()=>{
         setTarea(tarea.concat(props.input))
         setKey(key+1)   
@@ -22,9 +23,15 @@ export default function Tareas (props){
 
     console.log(tarea)
     
+    if(clear==="true"){
+        setTarea([])
+        return (<></>)
+    }
+
+    else{
     return (
         <>
             {tareasEnHtml}
         </>
-    )
+    )}
 }
